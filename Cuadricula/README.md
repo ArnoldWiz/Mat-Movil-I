@@ -1,7 +1,7 @@
-Affirmations App - Starter Code
+Affirmations App - Solution Code
 ================================
 
-Starter code for the Android Basics with Compose: Affirmations app.
+Solution code for the Android Basics with Compose: Affirmations app.
 
 
 Introduction
