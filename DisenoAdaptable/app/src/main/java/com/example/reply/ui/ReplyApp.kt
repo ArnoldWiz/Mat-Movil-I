@@ -14,7 +14,6 @@
  * limitations under the License.
  */
 package com.example.reply.ui
-
 import androidx.compose.material3.windowsizeclass.WindowWidthSizeClass
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
@@ -46,7 +45,7 @@ fun ReplyApp(
         }
         WindowWidthSizeClass.Expanded -> {
             navigationType = ReplyNavigationType.PERMANENT_NAVIGATION_DRAWER
-            contentType = ReplyContentType.LIST_ONLY
+            contentType = ReplyContentType.LIST_AND_DETAIL
         }
         else -> {
             navigationType = ReplyNavigationType.BOTTOM_NAVIGATION

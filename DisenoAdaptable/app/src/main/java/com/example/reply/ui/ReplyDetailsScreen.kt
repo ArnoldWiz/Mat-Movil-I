@@ -29,14 +29,13 @@ import androidx.compose.foundation.layout.asPaddingValues
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.safeDrawing
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
@@ -121,7 +120,7 @@ private fun ReplyDetailsScreenTopBar(
                 .background(MaterialTheme.colorScheme.surface, shape = CircleShape),
         ) {
             Icon(
-                imageVector = Icons.AutoMirrored.Filled.ArrowBack,
+                imageVector = Icons.Default.ArrowBack,
                 contentDescription = stringResource(id = R.string.navigation_back)
             )
         }
@@ -299,17 +298,16 @@ private fun ActionButton(
                 .padding(vertical = dimensionResource(R.dimen.detail_action_button_padding_vertical)),
             colors = ButtonDefaults.buttonColors(
                 containerColor =
-                if (containIrreversibleAction) {
-                    MaterialTheme.colorScheme.onErrorContainer
-                } else {
-                    MaterialTheme.colorScheme.primaryContainer
-                }
+                    if (containIrreversibleAction) {
+                        MaterialTheme.colorScheme.onErrorContainer
+                    } else {
+                        MaterialTheme.colorScheme.primaryContainer
+                    }
             )
         ) {
             Text(
                 text = text,
-                color =
-                if (containIrreversibleAction) {
+                color = if (containIrreversibleAction) {
                     MaterialTheme.colorScheme.onError
                 } else {
                     MaterialTheme.colorScheme.onSurfaceVariant
